@@ -1,0 +1,326 @@
+
+.clearfix:before{content:".";display:block;height:0;clear:both;visibility:hidden}
+.row.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+}
+.row.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+html, body, #map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #FFF;
+    font-family: "Trebuchet MS", sans-serif;
+}
+#forkongithub a {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 1rem;
+    line-height: 2rem;
+    position: relative;
+    transition: 0.5s;
+}
+#forkongithub a:hover {
+    background: #c11;
+    color: #fff;
+}
+#forkongithub a::before, #forkongithub a::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 1px;
+    background: #fff;
+}
+#forkongithub a::after {
+    bottom: 1px;
+    top: auto;
+}
+@media screen and (min-width: 800px) {
+    #forkongithub {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 200px;
+        overflow: hidden;
+        height: 200px;
+        z-index: 9999;
+    }
+    #forkongithub a {
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        right: -60px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    }
+}
+
+
+
+
+.content-wrapper{
+    min-height: 947px;
+    background: #1f263f;
+    padding-top: 75px;
+}
+.content{
+    padding: 0 16px;
+}
+.content .row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.content .row > [class*='col-']{
+    padding-right: 8px;
+    padding-left: 8px;
+}
+footer{
+    background: #1f263f;
+    text-align: center;
+    color: #fff;
+    line-height: 28px;
+}
+.box{
+    background: #38415c;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow:0 5px 10px 0 rgba(28,35,56,0.70);
+}
+.box .tit{
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    line-height: 48px;
+    height: 44px;
+    color: #fff;
+    white-space: nowrap;
+    background: url('../img/artboard.png') left 10px center no-repeat #434d69;
+}
+.box .tit:before{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -65px;
+    content: "";
+    width:130px;
+    height:0;
+    border-top: 5px solid #5b6b99;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.box .subtit{
+    padding: 4px 10px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #fff;
+}
+.box .subtit span{
+    margin: 0 10px 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.box + .box{
+    margin-top: 20px;
+}
+.loanNum{
+    margin-bottom: 20px;
+}
+.loanNum .item{
+    border-radius:5px;
+    line-height: 40px;
+    height: 46px;
+    padding: 0 20px;
+    font-size: 15px;
+    line-height: 46px;
+    color: #fff;
+}
+.loanNum .item + .item{
+    margin-top: 20px;
+}
+.loanNum .item span{
+    display: inline-block;
+    float: right;
+}
+.loanNum .item span strong{
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 15px;
+}
+.loanNum .item1{
+    background-image:linear-gradient(-90deg, #9e7ee8 0%, #f176b8 100%);
+}
+.loanNum .item2{
+    background-image:linear-gradient(-90deg, #619bfa 5%, #55e2b6 100%);
+}
+.loanNum .item3{
+    background-image:linear-gradient(-90deg, #9e7ee8 0%, #f176b8 100%);
+}
+#main1{
+	margin: 0 auto;
+    width: 100%;
+	height: 215px;
+}
+#main2{
+    margin: 0 auto;
+    width: 100%;
+    height: 215px;
+}
+#main3{
+    margin: 0 auto;
+    width: 100%;
+    height: 215px;
+}
+#main4{
+    margin: 0 auto;
+    width: 100%;
+    height: 330px;
+}
+#main5{
+    margin: 0 auto;
+    width: 100%;
+    height: 215px;
+}
+#main6{
+    margin: 0 auto;
+    width: 100%;
+    height: 215px;
+}
+#main7{
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+}
+#main8{
+    margin: 0 auto;
+    width: 100%;
+    height: 215px;
+}
+
+ul,li{
+    list-style: none;
+}
+.myscroll{
+    width: 100%;
+    height: 215px;
+    box-sizing: border-box;
+    padding: 20px;
+    position:relative;
+    overflow: hidden;
+}
+/* .myscroll {
+    background: #fff;
+    width: 80%;
+    height: 100px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    line-height: 32px;
+    font-size: 26px;
+    overflow: hidden;
+} */
+.myscroll ul{
+    padding: 0;
+}
+.myscroll li + li{
+    margin-top: 20px;
+}
+.myscroll li .item{
+    padding: 14px 20px;
+    border-radius: 5px;
+    box-shadow:0 5px 10px 0 rgba(28,35,56,0.70);
+    background-image:linear-gradient(-90deg, #364366 0%, #516492 100%);
+}
+.myscroll li .item .left{
+    float: left;
+}
+.myscroll li .item .left p{
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+.myscroll li .item .left span{
+    opacity:0.5;
+    font-family:PingFangSC-Medium;
+    font-size:14px;
+    color:#96a2c5;
+}
+.myscroll li .item .right1{
+    float: right;
+    width: 100px;
+    margin-right: 20px;
+}
+.myscroll li .item .right1 p{
+    font-family:PingFangSC-Medium;
+    font-size:16px;
+    color:#ef9a9a;
+    margin-bottom: 8px;
+}
+.myscroll li .item .right1 span{
+    font-family:PingFangSC-Medium;
+    font-size:12px;
+    color:#96a2c5;
+    text-align:center;
+}
+.myscroll li .item .right2{
+    float: right;
+    width: 120px;
+    margin-right: 20px;
+}
+.myscroll li .item .right2 p{
+    font-family:PingFangSC-Medium;
+    font-size:16px;
+    color:#fff;
+    margin-bottom: 8px;
+}
+.myscroll li .item .right2 span{
+    font-family:PingFangSC-Medium;
+    font-size:12px;
+    color:#96a2c5;
+    text-align:center;
+}
+.myscroll li .item .right3{
+    float: right;
+    width: 165px;
+    margin-right: 10px;
+}
+.myscroll li .item .right3 p{
+    font-family:PingFangSC-Medium;
+    font-size:16px;
+    color:#ffffff;
+    margin-bottom: 8px;
+}
+.myscroll li .item .right3 span{
+    font-family:PingFangSC-Medium;
+    font-size:12px;
+    color:#96a2c5;
+    text-align:center;
+}
+.swap{
+    margin-top: 20px;
+}
+/* .news_li,.swap{ line-height:19px; display:inline-block; position:absolute; top:0; left:72px;}
+.news_li a,.swap a{ color:#fff;}
+.swap{top:78px;} */

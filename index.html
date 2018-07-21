@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/esri.css">
+    <link rel="stylesheet" href="dist/css/index.css">
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div>
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <section class="content">
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-12">
+                            <div class="box">
+                                <div class="tit">贷款品种占比分布</div>
+                                <div id="main1"></div>
+                            </div>
+                            <div class="box">
+                                <div class="tit">关注累计贷款，不良贷款和正常贷款的比例</div>
+                                <div class="subtit">累计贷款: <span>413,414,110</span>元</div>
+                                <div id="main2"></div>
+                            </div>
+                            <div class="box">
+                                <div class="tit">年龄/男女客户群体分析</div>
+                                <div id="main3"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xs-12">
+                            <div class="loanNum">
+                                <p class="item item1">当前在贷金额<span><strong>239,067,000</strong>元</span></p>
+                                <p class="item item2">累计放款金额<span><strong>413,414,110</strong>元</span></p>
+                                <p class="item item3">申请在途金额<span><strong>20,000,000</strong>元</span></p>
+                            </div>
+                            <div class="box">
+                                <div class="tit">货款发生区域分布人数</div>
+                                <div id="main4"></div>    
+                            </div>
+                            <div class="box">
+                                <div class="tit">当前贷款申请数据监控</div>
+                                <!-- <div id="main5"></div> -->
+                                <div class="scrollwrap">
+                                    <div class="myscroll">
+                                        <ul class="news_li">
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left">
+                                                        <p>消费分期贷产品1笔（3期）</p>
+                                                    </div>
+                                                    <div class="right3">
+                                                        <p>2018-07-18 20:00:26</p>
+                                                        <span>申请时间</span>
+                                                    </div>
+                                                    <div class="right2">
+                                                        <p>财务初审中</p>
+                                                        <span>申请状态</span>
+                                                    </div>
+                                                    <div class="right1">
+                                                        <p>8,000,000</p>
+                                                        <span>申请金额</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left">
+                                                        <p>供应链贷产品1笔（6期）</p>
+                                                    </div>
+                                                    <div class="right3">
+                                                        <p>2018-07-17 12:23:29</p>
+                                                        <span>申请时间</span>
+                                                    </div>
+                                                    <div class="right2">
+                                                        <p>财务放款审批中</p>
+                                                        <span>申请状态</span>
+                                                    </div>
+                                                    <div class="right1">
+                                                        <p>12,000,000</p>
+                                                        <span>申请金额</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item clearfix">
+                                                    <div class="left">
+                                                        <p>消费分期贷产品1笔（3期）</p>
+                                                    </div>
+                                                    <div class="right3">
+                                                        <p>2018-07-20 04:44:46</p>
+                                                        <span>申请时间</span>
+                                                    </div>
+                                                    <div class="right2">
+                                                        <p>拒绝</p>
+                                                        <span>申请状态</span>
+                                                    </div>
+                                                    <div class="right1">
+                                                        <p>1000</p>
+                                                        <span>申请金额</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="swap"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-xs-12">
+                            <div class="box">
+                                <div class="tit">按月发生额统计</div>
+                                <div id="main6"></div>
+                            </div>
+                            <div class="box">
+                                <div class="tit">申请和发放贷款信息</div>
+                                <div id="main7"></div>
+                            </div>
+                            <div class="box">
+                                <div class="tit">国安社区线上注册用户</div>
+                                <div id="main8"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- ECharts单文件引入 -->
+    <script src="dist/js/jQuery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OfhWyvaVhXf0kvrupzF4NO9Rc6uEuQje"></script>
+    <script src="dist/js/echarts.min.js"></script>
+    <script src="theme/dark.js"></script>
+    <!-- <script src="dist/js/bmap.min.js"></script> -->
+    <script src="dist/js/china.js"></script>
+    <!-- <script src="dist/js/geoJson.js"></script> -->
+    <script src="dist/js/index.js"></script>
+    <script>
+        $(function(){
+            clearInterval(timer); 
+            x = $('.news_li');
+            lih = $('.news_li li').outerHeight() + 20;
+            h = $('.news_li li').length * lih;
+            var timer = setInterval(function(){
+                x.animate({marginTop: - lih + 'px'},'slow','swing',function(){
+                    $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+                });
+            }, 3000) ;
+        })
+    </script>
+</body>
