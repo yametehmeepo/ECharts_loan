@@ -77,11 +77,10 @@ body {
 }
 
 
-
-
 .content-wrapper{
-    min-height: 947px;
+    height: 100vh;
     background: #1f263f;
+    background-size: 100% 100%;
     padding-top: 75px;
 }
 .content{

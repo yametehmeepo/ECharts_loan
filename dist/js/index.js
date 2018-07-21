@@ -54,6 +54,100 @@ var myChart6 = echarts.init(document.getElementById('main6'), 'dark');
 var myChart7 = echarts.init(document.getElementById('main7'), 'dark');
 var myChart8 = echarts.init(document.getElementById('main8'), 'dark');
 
+
+var h1 = 215;
+var h2 = 215;
+var h3 = 215;
+var h4 = 330;
+var h6 = 215;
+var h7 = 250;
+var h8 = 215;
+
+
+var s1 = 270;
+var s2 = 236;
+var s3 = 270;
+var s4 = 460;
+var s6 = 270;
+var s7 = 270;
+var s8 = 270;
+
+function restoreECharts(){
+    $("#main1").css("height",h1);
+    $("#main2").css("height",h2);
+    $("#main3").css("height",h3);
+    $("#main4").css("height",h4);
+    $("#main6").css("height",h6);
+    $("#main7").css("height",h7);
+    $("#main8").css("height",h8);
+    myChart1.resize();
+    myChart2.resize();
+    myChart3.resize();
+    myChart4.resize();
+    myChart6.resize();
+    myChart7.resize();
+    myChart8.resize();
+}
+
+function FullECharts(){
+    $("#main1").css("height",s1);
+    $("#main2").css("height",s2);
+    $("#main3").css("height",s3);
+    $("#main4").css("height",s4);
+    $("#main6").css("height",s6);
+    $("#main7").css("height",s7);
+    $("#main8").css("height",s8);
+    myChart1.resize();
+    myChart2.resize();
+    myChart3.resize();
+    myChart4.resize();
+    myChart6.resize();
+    myChart7.resize();
+    myChart8.resize();
+}
+
+
+$(function(){
+    isFullscreenForNoScroll();
+})
+
+
+function isFullscreenForNoScroll(){
+    var explorer = window.navigator.userAgent.toLowerCase();
+    if(explorer.indexOf('chrome')>0){//webkit
+        if (document.body.scrollHeight === window.screen.height && document.body.scrollWidth === window.screen.width) {
+            //alert("全屏");
+            FullECharts()
+        } else {
+            //alert("不全屏");
+            restoreECharts()
+        }
+    }else{//IE 9+  fireFox
+        if (window.outerHeight === window.screen.height && window.outerWidth === window.screen.width) {
+            //alert("全屏");
+            FullECharts()
+        } else {
+            //alert("不全屏");
+            restoreECharts()
+        }
+    }
+}
+
+window.onresize = function() {
+    isFullscreenForNoScroll();
+}
+
+
+
+
+
+
+
+
+
+
+
+
 //贷款品种占比分布
 var option1 = {
     backgroundColor: '#38415c',
