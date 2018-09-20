@@ -176,15 +176,15 @@ var option1 = {
             color:['#ed6caf','#ffb27f','#20dc85'], 
             data:[
                 {
-                    value:250, 
+                    value:275, 
                     name:'消费分期贷',
                 },
                 {
-                    value:27, 
+                    value:34, 
                     name:'供应链(企业)贷',
                 },
                 {
-                    value:2, 
+                    value:0, 
                     name:'供应链(个人)贷',
                 },
             ],
@@ -1154,8 +1154,8 @@ var option8 = {
             type: 'value',
             name: '数量(万)',
             min: 0,
-            max: 200,
-            interval: 40,
+            max: 700,
+            interval: 100,
         }
     ],
     series: [
@@ -1168,7 +1168,7 @@ var option8 = {
                     color: '#FF5252'
                 }
             },
-            data:[20.2400, 35.1900, 60.6603, 90.4303, 166.0503, 186.9203]
+            data:[440.2400, 455.1900, 480.6603, 510.4303, 586.0503, 606.9203]
         },
         {
             name:'数量',
@@ -1178,34 +1178,12 @@ var option8 = {
                     color: '#FFF59D'
                 }
             },
-            data:[20.2400, 35.1900, 60.6603, 90.4303, 166.0503, 186.9203]
+            data:[440.2400, 455.1900, 480.6603, 510.4303, 586.0503, 606.9203]
         }
     ]
 };
 
 myChart8.setOption(option8);
-
-//无缝滚动
-function b(){   
-    t = parseInt(x.css('top'));
-    y.css('top','19px');    
-    x.animate({top: t - 19 + 'px'},'slow'); //19为每个li的高度
-    if(Math.abs(t) == h-19){ //19为每个li的高度
-        y.animate({top:'0px'},'slow');
-        z=x;
-        x=y;
-        y=z;
-    }
-    setTimeout(b,3000);//滚动间隔时间 现在是3秒
-}
-$(document).ready(function(){
-    $('.swap').html($('.news_li').html());
-    x = $('.news_li');
-    y = $('.swap');
-    h = $('.news_li li').length * 78; //19为每个li的高度
-    setTimeout(b,3000);//滚动间隔时间 现在是3秒
-})
-
 
 
 
