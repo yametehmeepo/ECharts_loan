@@ -1127,7 +1127,7 @@ myChart4.on('mouseout', function(params) {
     }, 1000);
 });*/
 
-//国安社区线上注册用户
+//线上注册用户
 var option8 = {
     backgroundColor: '#38415c',
     tooltip: {
